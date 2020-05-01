@@ -100,13 +100,15 @@ your license (something like ###@your_company_domain), as follows:
 In order to run Abaqus from any location, execute the following comand
 `sudo ln /var/DassaultSystemes/SIMULIA/Commands/abq2019 /usr/bin/abaqus`
 
-### Addtional Errors
+### OpenGL Errors
 If there is any warning regarding OpenGL in the terminal during start,
 simply run Abaqus with -mesa parameter:
 ```
     abaqus cae -mesa
     abaqus view -mesa
 ```
+
+### Shortcuts
 Create shortcut for CAE:
 
     gedit ~/.local/share/applications/abaquscae.desktop
@@ -146,7 +148,7 @@ Then make *.desktop executable:
 
 
 
-## MIMETYPES & ICONS
+### MIMETYPES & ICONS
 
 Delete LibreOffice mime type for ODB:
 
@@ -211,7 +213,7 @@ Create icons for Abaqus file types:
 
 
 
-## FONTS
+### FONTS
 
 Open Abaqus CAE and check if it uses *Courier-New* and *Verdana* fonts:
 
@@ -264,7 +266,7 @@ For big displays font HELVETICA and sizes 17-20-25 are more appropriate:
 
 
 
-## FORTRAN
+### FORTRAN
 
 To use *gfortran* edit:
 
@@ -279,15 +281,11 @@ as follows:
 
 <br/><br/>
 
-
-
-## BUGS
-
-Process hangs and doesn't finish:
-- https://askubuntu.com/questions/1062058/process-hangs-before-termination-with-ubuntu-18-04
-- https://github.com/Kevin-Mattheus-Moerman/Abaqus-Installation-Instructions-for-Ubuntu/issues/1
-- http://learningpatterns.me/posts-output/2018-01-30-abaqus-singularity/
-
 <!--
 How to avoid strange Fox-windows? After each start delete file $HOME/abaqus_2019.gpr?
 -->
+
+## Credits
+This guide is based on:
+- https://github.com/Kevin-Mattheus-Moerman/Abaqus-Installation-Instructions-for-Ubuntu
+- https://github.com/imirzov/Install-Abaqus-2019-on-Ubuntu-18.04-LTS
