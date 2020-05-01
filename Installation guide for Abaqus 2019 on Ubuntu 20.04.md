@@ -1,11 +1,10 @@
 ## Abaqus 2019 on Ubuntu 20.04
 
 ### Intro
-Ubuntu seems to not be officially supported by the Abaqus installation procedure. This guide shows how to install the necessary libraries and 
-how to tweak the installation files in order to install Abaqus on Ubuntu 20.04. To successfully follow this guide you need writing privileges ('sudo').
+Ubuntu seems to not be officially supported by the Abaqus installation procedure. This guide shows how to install the necessary libraries and how to tweak the installation files in order to install Abaqus on Ubuntu 20.04. To successfully follow this guide you need writing privileges ('sudo').
 
-*Note*</br>
-This guide should also work for Abaqus6.14 (changing accordigly file names and paths) and Ubuntu 18.xx adn 19.xx, although I haven't test it. 
+*Note:*</br>
+This guide should also work for Abaqus6.14 (changing accordigly file names and paths) and Ubuntu 18.xx adn 19.xx, although I haven't tested it. 
 
 ### Install prerequisites
 The standart Ubuntu relaase might not have one or more of the following libraries needed by Abaqus:
