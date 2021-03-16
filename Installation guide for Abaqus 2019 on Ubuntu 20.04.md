@@ -7,7 +7,7 @@ Ubuntu seems to not be officially supported by the Abaqus installation procedure
 This guide should also work for Abaqus6.14 (changing accordigly file names and paths) and Ubuntu 18.xx adn 19.xx, although I haven't tested it. 
 
 ### Install prerequisites
-The standart Ubuntu relaase might not have one or more of the following libraries needed by Abaqus:
+The standart Ubuntu release might not have one or more of the following libraries needed by Abaqus:
 - libjpeg
 - libstdc++ 4.7
 - openmotif 2.3
@@ -31,6 +31,8 @@ sudo apt-get update
 sudo apt-get install synaptic
 ```
 Once installed, open it and look for the aforementioned libraries and install them.
+
+
 
 ### Modify the Linux.sh file
 Since Ubuntu is not officially supported, trying to install Abaqus will result in an error. In order to fix it, prior launching
@@ -78,7 +80,7 @@ sudo ./StartGUI.sh
 ```
 
 this will start the installation for all the Abaqus-related products. Skip the installation of the FlexNET server 
-(this will cause an error) and provceed with the installation using the default locations for the software:
+(this will cause an error) and proceed with the installation using the default locations for the software:
 ```
 /usr/DassaultSystemes/SimulationServices/V6R2019x
 /usr/SIMULIA/CAE/2019
