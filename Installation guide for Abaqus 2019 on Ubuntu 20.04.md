@@ -21,7 +21,7 @@ The standart Ubuntu relaase might not have one or more of the following librarie
 To install them open a terminal and execute the following commmand:
 ```
 sudo apt update
-sudo apt install csh tcsh ksh gcc g++ gfortran libstdc++5 build-essential make libjpeg62 libmotif-dev```<br/>
+sudo apt install csh tcsh ksh gcc g++ gfortran libstdc++5 build-essential make libjpeg62 libmotif-dev
 ```
 
 Check the output of the installations and if there are errors try to install the ones that failed using the 
