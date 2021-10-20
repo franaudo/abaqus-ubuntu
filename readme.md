@@ -308,6 +308,31 @@ as follows:
 How to avoid strange Fox-windows? After each start delete file $HOME/abaqus_2019.gpr?
 -->
 
+## KWON ISSUES AND POSSIBLE SOLUTIONS
+
+### Run bash and not dash
+
+If you get an error starting like:
+
+```bash
+`./StartGUI.sh: 4: typeset: not found CurrentMediaDir initial="" ./StartGUI.sh: 6: typeset: not found ./StartGUI.sh: 8: [[: not found ./StartGUI.sh: 10: [[: not found
+...
+```
+
+Check that you run bash and not dash (dash is default in Ubuntu, and the Abaqus Installation script uses bash-specific commands).
+
+One way is to search as root (or via sudo) for `/usr/bin/sh` and make it a symlink to `/usr/bin/bash` .
+
+You should not forget to re-link `/usr/bin/sh` to dash after the Abaqus installation.
+
+### License Validation
+
+If you cannnot validate the license, probably your Ubuntu is not in English. You ran the program from the terminator with this code:
+
+```bash
+LANG=en_US.utf8 abaqus cae -mesa
+```
+
 ## Credits
 
 This guide is based on:
