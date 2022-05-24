@@ -5,11 +5,11 @@
 Ubuntu seems to not be officially supported by the Abaqus installation procedure. This guide shows how to install the necessary libraries and how to tweak the installation files in order to install Abaqus on Ubuntu 20.04. To successfully follow this guide you need writing privileges ('sudo').
 
 *Note:*</br>
-This guide should also work for Abaqus 2021 (changing accordigly file names and paths) and Ubuntu 20.10 till 22.04, although I haven't tested it.
+This guide should also work for Abaqus 2021 (changing accordingly file names and paths) and Ubuntu 20.10 till 22.04, although I haven't tested it.
 
 ## Install prerequisites
 
-The standart Ubuntu release might not have one or more of the following libraries needed by Abaqus:
+The standard Ubuntu release might not have one or more of the following libraries needed by Abaqus:
 
 * libjpeg
 * libstdc++ 4.7
@@ -21,7 +21,7 @@ The standart Ubuntu release might not have one or more of the following librarie
 * lsb-release-2.0
 * libpng12-0
 
-To install them open a terminal and execute the following commmand:
+To install them open a terminal and execute the following command:
 
 ```bash
 sudo apt update
@@ -75,38 +75,38 @@ in each of them:
   esac
 ```
 
-Note the changes: 1) the release version was forced to be `"CentOS"` , and 2) checking of prerequisites was disabled.
+Note the changes: 1) the release version was forced to be `"CentOS"`, and 2) checking for prerequisites was disabled.
 
 ## Run setup
-The setup of Abaqus requiers a `bash` instead of a `dash` shell, wheras the latter is the default in Ubuntu. To temporary change that we symlink the shell command to `bash` by:
+The setup of Abaqus requires a `bash` instead of a `dash` shell, whereas the latter is the default in Ubuntu. To temporary change that we symlink the shell command to `bash` by:
 ```dash
 sudo ln -sf bash /bin/sh
 ```
-which we'll undo after the instalation.
+which we'll undo after the installation.
 
 Once all the prerequisites are installed and the installation files modified, it is possible to proceed with the installation:
 ```bash
-cd path_to_abaqus_installation_folder\1
+cd path_to_abaqus_installation_folder/1
 sudo ./StartGUI.sh
 ```
 
-this will start the installation for all the Abaqus-related products. Use standard locations for everything.
+this will start the installation for all the Abaqus related products. Use standard locations for everything.
 ```bash
 /usr/SIMULIA/EstProducts/2022
 ```
-When it asks for the licence skip it "Skip licensing configuration" (otherwise it will cause an error) and proceed with the installation using the default locations for the software:
+When it asks for the license skip it "Skip licensing configuration" (otherwise it will cause an error) and proceed with the installation using the default locations for the software:
 ```bash
 /var/DassaultSystemes/SIMULIA/Commands
 /var/DassaultSystemes/SIMULIA/CAE/plugins/2022
 ```
 
-Now that the instalation is complete we revert the standard shell back to dash:
+Now that the installation is complete we revert the standard shell back to dash:
 ```bash
 sudo ln -sf dash /bin/sh
 ```
 
-## Licence Activation.
-The exact way to setup a licence depends on the type of licence that you have. FlexNET or DSLS.
+## License Activation.
+The exact way to setup a license depends on the type of license that you have. FlexNET or DSLS.
 
 ### FlexNET
 To specify a FlexNET server, execute:
@@ -124,7 +124,7 @@ and then change the license server type to FLEXNET and the abaquslm_license_file
   license_server_type=FLEXNET
   abaquslm_license_file="<port>@<your_domain>"
 ```
-where `<port>` is the port used on the licence server, and `<your_domain>` the domain of the licence server.
+where `<port>` is the port used on the license server, and `<your_domain>` the domain of the license server.
 
 ### DSLS
 To specify a DSLS server, execute:
@@ -135,11 +135,11 @@ and add to this file the line:
 ```sh
   <your_domain>:<port>
 ```
-where `<port>` is the port used on the licence server, and `<your_domain>` the domain of the licence server.
+where `<port>` is the port used on the license server, and `<your_domain>` the domain of the license server.
 
 ## Make abaqus command available from any directory
 
-In order to run Abaqus from any location, execute the following comand: 
+In order to run Abaqus from any location, execute the following command: 
 ```sh
 sudo ln /var/DassaultSystemes/SIMULIA/Commands/abq2022 /usr/bin/abaqus`
 ```
@@ -192,7 +192,7 @@ gedit ~/.local/share/applications/abaqusviewer.desktop
 Then make *.desktop executable:  
 *Properties-->Permissions-->Allow executing file as program*.
 
-## MIMETYPES & ICONS
+## MIME-TYPES & ICONS
 
 Delete LibreOffice mime type for ODB:
 
@@ -292,7 +292,7 @@ Install MS core fonts and RESTART:
 
 -->
 
-I didn't get the follwing font size increase working, I only found the file `EstProducts` file and nothing such as `/opt/SIMULIA` or `opt/DassaultSystems`. I expected that the following file would do the trick, but it doesn't:
+I didn't get the following font size increase working, I only found the file `EstProducts` file and nothing such as `/opt/SIMULIA` or `opt/DassaultSystems`. I expected that the following file would do the trick, but it doesn't:
 
 ```sh
 sudo gedit /usr/SIMULIA/EstProducts/2022/linux_a64/SMA/Configuration/Xresources/en_US/en_US_Dict.py
@@ -343,7 +343,7 @@ as follows:
 How to avoid strange Fox-windows? After each start delete file $HOME/abaqus_2019.gpr?
 -->
 
-## KWON ISSUES AND POSSIBLE SOLUTIONS
+## KNOWN ISSUES AND POSSIBLE SOLUTIONS
 
 ### License Validation
 
