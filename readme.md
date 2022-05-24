@@ -335,9 +335,9 @@ sudo gedit /usr/SIMULIA/EstProducts/2022/linux_a64/SMA/site/lnx86_64.env
 as follows:
 
 * Change `ifort` to `gfortran` on the `fortCmd` line and make sure that `g++` is on the `cppCmd` line
-* Remove gnu-incompatible compiler flags from the compile_fortran line (-V, -auto, -mP2OPT_hpo_vec_divbyzero=F, -extend_source, -fpp, -WB)
-* link_sl: remove command line options ‘-V’, ‘-cxxlib’, ‘-threads’, ‘-parallel’, ‘-shared-intel’
-* add '-lgfortran' to the link_sl and link_exe lines
+* Remove gnu-incompatible compiler flags from the compile_fortran line (`-V, -auto, -mP2OPT_hpo_vec_divbyzero=F, -extend_source, -fpp, -WB`)
+* link_sl: remove command line options `-V, -cxxlib, -threads, -parallel, -shared-intel`
+* add `-lgfortran` to the `link_sl` and `link_exe` lines
 
 <!--
 How to avoid strange Fox-windows? After each start delete file $HOME/abaqus_2019.gpr?
