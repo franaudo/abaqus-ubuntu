@@ -141,7 +141,7 @@ where `<port>` is the port used on the license server, and `<your_domain>` the d
 
 In order to run Abaqus from any location, execute the following command: 
 ```sh
-sudo ln /var/DassaultSystemes/SIMULIA/Commands/abq2022 /usr/bin/abaqus`
+sudo ln /var/DassaultSystemes/SIMULIA/Commands/abq2022 /usr/bin/abaqus
 ```
 
 ## OpenGL Errors
